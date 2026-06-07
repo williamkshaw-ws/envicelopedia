@@ -429,19 +429,19 @@ export default function App() {
       <div className="relative z-10 max-w-6xl mx-auto px-4 py-8">
         
         {/* Site Header */}
-        <header className="flex flex-col md:flex-row justify-between items-center gap-6 border-b border-neutral-850 pb-8 mb-8">
-          <div className="flex flex-col items-center md:items-start text-center md:text-left">
-            <h1 className="font-sans font-black text-4xl md:text-5xl uppercase tracking-tighter text-white flex items-center gap-3">
-              <span className="bg-gradient-to-r from-blue-500 via-[#ccff00] to-emerald-400 bg-clip-text text-transparent">
-                enVicelopedia
-              </span>
-            </h1>
-            <p className="text-xs font-mono tracking-widest text-neutral-400 mt-2 uppercase">
+        <header className="flex flex-col items-center gap-6 border-b border-neutral-850 pb-8 mb-8 relative">
+          <div className="flex flex-col items-center text-center">
+            <img 
+              src="/logo.jpg" 
+              alt="The EnVicelopedia" 
+              className="max-h-36 md:max-h-48 w-auto object-contain mx-auto rounded-2xl" 
+            />
+            <p className="text-xs font-mono tracking-widest text-neutral-400 mt-4 uppercase">
               The Chronological History & Technical Catalog of Vice Golf Balls
             </p>
           </div>
 
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-3 md:absolute md:right-0 md:top-1/2 md:-translate-y-1/2 mt-2 md:mt-0">
             {/* Theme Toggle */}
             <button 
               onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
